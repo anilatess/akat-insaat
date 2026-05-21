@@ -10,6 +10,10 @@ import type {
 
 const TOKEN_KEY = 'akat_admin_token'
 
+// Same-origin (/api) by default. Set VITE_API_URL at build time to point the
+// frontend at a backend hosted elsewhere (e.g. a Render/VPS API URL).
+const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
+
 export const tokenStore = {
   get: () => localStorage.getItem(TOKEN_KEY),
   set: (t: string) => localStorage.setItem(TOKEN_KEY, t),
@@ -33,7 +37,7 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
     headers['Content-Type'] = 'application/json'
   if (token) headers['Authorization'] = `Bearer ${token}`
 
-  const res = await fetch(`/api${path}`, { ...options, headers })
+  const res = await fetch(`${API_BASE}/api${path}`, { ...options, headers })
 
   if (res.status === 204) return undefined as T
 
