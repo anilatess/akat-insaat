@@ -6,7 +6,10 @@ import { existsSync, mkdirSync } from 'node:fs'
 import { requireAuth } from '../auth.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-export const UPLOAD_DIR = join(__dirname, '..', 'uploads')
+// Configurable so it can point at a persistent disk in production
+// (e.g. UPLOAD_DIR=/var/data/uploads on Render).
+export const UPLOAD_DIR =
+  process.env.UPLOAD_DIR || join(__dirname, '..', 'uploads')
 
 if (!existsSync(UPLOAD_DIR)) mkdirSync(UPLOAD_DIR, { recursive: true })
 

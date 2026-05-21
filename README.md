@@ -100,7 +100,28 @@ koyup 80/443'ü 3001'e yönlendirebilirsiniz. Sürekli çalışması için **PM2
 > `ADMIN_USERNAME/PASSWORD` yalnızca veritabanı **ilk oluşturulurken** kullanılır.
 > Sonradan şifreyi panelden değiştirebilirsiniz.
 
-## 🚀 Canlıya Alma Kontrol Listesi
+## 🚀 Render.com ile Yayına Alma (önerilen)
+
+Bu repo, Render Blueprint (`render.yaml`) ile gelir — birkaç tıkla yayınlanır:
+
+1. [render.com](https://render.com) hesabı açın, GitHub ile bağlanın.
+2. **New → Blueprint** → `anilatess/akat-insaat` reposunu seçin. Render `render.yaml`'ı
+   otomatik okur (web servisi + 1GB kalıcı disk + `JWT_SECRET` üretimi).
+3. İsterseniz `ADMIN_USERNAME` / `ADMIN_PASSWORD` ortam değişkenlerini güçlü değerlerle
+   girin (girmezseniz `admin` / `akat2024` ile başlar, sonra panelden değiştirirsiniz).
+4. **Apply** deyin. Render kurar, derler ve yayınlar → `https://akat-insaat.onrender.com`
+   gibi bir adres verir. Kendi domaininizi **Settings → Custom Domain**'den ekleyip
+   SSL'i otomatik alabilirsiniz.
+
+> **Önemli:** Veritabanı ve görsellerin kalıcı olması için kalıcı disk gerekir; bu da
+> Render'ın **Starter planında** (~7$/ay) bulunur. Render **ücretsiz** planında disk
+> olmadığından veriler kalıcı olmaz. Tamamen ücretsiz bir kurulum isterseniz mimariyi
+> bulut veritabanı (Turso) + bulut görsel depolama ile değiştirmek gerekir.
+
+Disk şu env değişkenleriyle kullanılır (render.yaml'da ayarlı):
+`DB_PATH=/var/data/data.db`, `UPLOAD_DIR=/var/data/uploads`.
+
+## 🚀 Kendi Sunucunuzda (VPS) Yayına Alma
 
 1. Sunucuya (VPS) Node.js 20+ kurun, projeyi kopyalayın, `npm install` çalıştırın.
 2. `.env` dosyası oluşturup en az şunları ayarlayın:

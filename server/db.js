@@ -1,11 +1,16 @@
 import Database from 'better-sqlite3'
 import bcrypt from 'bcryptjs'
+import { existsSync, mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { seedProjects, seedServices } from './seed.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DB_PATH = process.env.DB_PATH || join(__dirname, 'data.db')
+
+// Ensure the parent directory exists (e.g. a mounted disk like /var/data).
+const DB_DIR = dirname(DB_PATH)
+if (!existsSync(DB_DIR)) mkdirSync(DB_DIR, { recursive: true })
 
 const db = new Database(DB_PATH)
 db.pragma('journal_mode = WAL')
