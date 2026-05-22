@@ -13,8 +13,8 @@ export const company = {
   emailHref: 'mailto:info@akat-insaat.com',
   fax: '0(216) 312 24 36',
   address:
-    'Mimar Sinan Mh. Çavuşbaşı Cad. Özge Sokak Birleşim İş Merkezi No: 5 D: 4 Çekmeköy / İstanbul',
-  mapQuery: 'Çekmeköy İstanbul',
+    'Meclis Mahallesi Teraziler Caddesi Derviş Sokak No: 38/1 Sancaktepe / İstanbul',
+  mapQuery: 'Meclis Mahallesi Teraziler Caddesi Sancaktepe İstanbul',
   social: {
     instagram: 'https://instagram.com',
     facebook: 'https://facebook.com',
