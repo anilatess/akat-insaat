@@ -5,7 +5,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Printer,
   Send,
 } from 'lucide-react'
 import { company } from '../data/site'
@@ -63,7 +62,6 @@ export default function Contact() {
       value: company.email,
       href: company.emailHref,
     },
-    { icon: Printer, title: 'Faks', value: company.fax },
   ]
 
   return (

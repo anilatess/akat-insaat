@@ -9,9 +9,8 @@ export const company = {
   founded: 2009,
   phone: '0(216) 642 54 06',
   phoneHref: 'tel:+902166425406',
-  email: 'info@akat-insaat.com',
-  emailHref: 'mailto:info@akat-insaat.com',
-  fax: '0(216) 312 24 36',
+  email: 'tuncer@akatinsaat.com',
+  emailHref: 'mailto:tuncer@akatinsaat.com',
   address:
     'Meclis Mahallesi Teraziler Caddesi Derviş Sokak No: 38/1 Sancaktepe / İstanbul',
   mapQuery: 'Meclis Mahallesi Teraziler Caddesi Sancaktepe İstanbul',
