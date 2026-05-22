@@ -229,7 +229,7 @@ export default function Contact() {
           <Reveal>
             <div className="overflow-hidden rounded-3xl border border-ink-100">
               <iframe
-                title="AKAT İnşaat Konum"
+                title="AKAT Teknik İnşaat Konum"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(
                   company.mapQuery,
                 )}&output=embed`}

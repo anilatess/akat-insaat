@@ -37,7 +37,7 @@ export default function Navbar() {
     >
       <nav className="container-px flex h-18 items-center justify-between py-3">
         <Link to="/" aria-label={company.name}>
-          <Logo variant={scrolled ? 'dark' : 'dark'} />
+          <Logo variant={scrolled ? 'dark' : 'light'} />
         </Link>
 
         {/* Desktop nav */}
@@ -50,8 +50,10 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `${linkBase} ${
                     isActive
-                      ? 'text-brand-600'
-                      : 'text-ink-700 hover:text-brand-600'
+                      ? 'text-brand-500'
+                      : scrolled
+                        ? 'text-ink-700 hover:text-brand-600'
+                        : 'text-white/90 hover:text-white'
                   }`
                 }
               >
@@ -84,7 +86,11 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-ink-900 transition-colors hover:bg-ink-100 lg:hidden"
+          className={`inline-flex h-11 w-11 items-center justify-center rounded-xl transition-colors lg:hidden ${
+            scrolled
+              ? 'text-ink-900 hover:bg-ink-100'
+              : 'text-white hover:bg-white/10'
+          }`}
           aria-label={open ? 'Menüyü kapat' : 'Menüyü aç'}
           aria-expanded={open}
         >

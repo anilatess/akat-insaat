@@ -1,7 +1,7 @@
 import type { Project, Service } from '../types'
 
 export const company = {
-  name: 'AKAT İnşaat',
+  name: 'AKAT Teknik İnşaat',
   shortName: 'AKAT',
   tagline: 'Modern ve şık çizgilerle yaşayan projelerin mimarıyız',
   description:

@@ -4,17 +4,17 @@
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
-  /* Brand palette — slate base + amber/construction accent */
-  --color-brand-50: #fff8eb;
-  --color-brand-100: #ffedc7;
-  --color-brand-200: #ffd989;
-  --color-brand-300: #ffbe4b;
-  --color-brand-400: #ffa31f;
-  --color-brand-500: #f98307;
-  --color-brand-600: #dd6002;
-  --color-brand-700: #b74006;
-  --color-brand-800: #94310c;
-  --color-brand-900: #7a290d;
+  /* Brand palette — slate base + metallic gold accent (AKAT identity) */
+  --color-brand-50: #faf6ec;
+  --color-brand-100: #f3e8c9;
+  --color-brand-200: #e8d29a;
+  --color-brand-300: #d9b86a;
+  --color-brand-400: #c9a14a;
+  --color-brand-500: #b88a2f;
+  --color-brand-600: #9c7022;
+  --color-brand-700: #7e571e;
+  --color-brand-800: #66471d;
+  --color-brand-900: #543b1c;
 
   --color-ink-50: #f6f7f9;
   --color-ink-100: #eceef2;

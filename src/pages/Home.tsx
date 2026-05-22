@@ -204,7 +204,7 @@ function AboutSection() {
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80"
-              alt="AKAT İnşaat şantiye çalışması"
+              alt="AKAT Teknik İnşaat şantiye çalışması"
               className="aspect-4/3 w-full rounded-3xl object-cover"
             />
             <div className="absolute -bottom-6 -right-4 hidden rounded-2xl bg-brand-500 px-7 py-6 text-white shadow-xl sm:block">
@@ -221,7 +221,7 @@ function AboutSection() {
             align="left"
             eyebrow="Hakkımızda"
             title="Detaya önem veren, güvenilir bir çözüm ortağı"
-            description="AKAT İnşaat olarak, modern ve şık çizgilerle yaşayan projeler ortaya koyuyoruz. Her ölçekte projede kaliteyi, estetiği ve dayanıklılığı bir arada sunmayı ilke ediniyoruz."
+            description="AKAT Teknik İnşaat olarak, modern ve şık çizgilerle yaşayan projeler ortaya koyuyoruz. Her ölçekte projede kaliteyi, estetiği ve dayanıklılığı bir arada sunmayı ilke ediniyoruz."
           />
           <ul className="mt-8 space-y-4">
             {highlights.map((h, i) => (

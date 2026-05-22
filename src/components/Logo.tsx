@@ -1,55 +1,59 @@
-import { company } from '../data/site'
+import { useId } from 'react'
 
 type LogoProps = {
   variant?: 'light' | 'dark'
   className?: string
 }
 
+// Stacked gold chevrons — the AKAT Teknik İnşaat brand mark.
+function ChevronMark({ className = '' }: { className?: string }) {
+  const id = useId()
+  const grad = `akat-gold-${id}`
+  const rows = [0, 1, 2, 3, 4]
+  return (
+    <svg viewBox="0 0 120 116" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id={grad} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#ecd28a" />
+          <stop offset="45%" stopColor="#cda04a" />
+          <stop offset="100%" stopColor="#9a6f28" />
+        </linearGradient>
+      </defs>
+      {rows.map((i) => {
+        const apexY = 12 + i * 13
+        return (
+          <path
+            key={i}
+            d={`M16 ${apexY + 26} L60 ${apexY} L104 ${apexY + 26}`}
+            fill="none"
+            stroke={`url(#${grad})`}
+            strokeWidth="9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        )
+      })}
+    </svg>
+  )
+}
+
 export default function Logo({ variant = 'dark', className = '' }: LogoProps) {
-  const textColor = variant === 'light' ? 'text-white' : 'text-ink-900'
-  const subColor = variant === 'light' ? 'text-ink-300' : 'text-ink-500'
+  const akatColor = variant === 'light' ? 'text-white' : 'text-ink-900'
+  const subColor = variant === 'light' ? 'text-brand-300' : 'text-brand-600'
 
   return (
-    <span className={`flex items-center gap-2.5 ${className}`}>
-      <svg
-        viewBox="0 0 64 64"
-        className="h-9 w-9 shrink-0"
-        aria-hidden="true"
-      >
-        <rect width="64" height="64" rx="14" fill="#0f172a" />
-        <path
-          d="M14 46 V27 L32 14 L50 27 V46 Z"
-          fill="none"
-          stroke="#f98307"
-          strokeWidth="4"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 46 H52"
-          stroke="#f98307"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <rect x="27" y="33" width="10" height="13" fill="#f98307" />
-        <path
-          d="M22 27 L32 20 L42 27"
-          fill="none"
-          stroke="#ffd989"
-          strokeWidth="3"
-          strokeLinejoin="round"
-        />
-      </svg>
+    <span className={`flex items-center gap-3 ${className}`}>
+      <ChevronMark className="h-10 w-10 shrink-0" />
       <span className="leading-none">
         <span
-          className={`block font-display text-lg font-extrabold tracking-tight ${textColor}`}
+          className={`block font-serif text-2xl font-bold tracking-[0.12em] ${akatColor}`}
         >
-          {company.shortName}
-          <span className="text-brand-500">.</span>
+          AKAT
         </span>
         <span
-          className={`block text-[10px] font-semibold uppercase tracking-[0.25em] ${subColor}`}
+          className={`mt-0.5 block text-[9px] font-semibold uppercase tracking-[0.22em] ${subColor}`}
         >
-          İnşaat
+          Teknik İnşaat
         </span>
       </span>
     </span>
