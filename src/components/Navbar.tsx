@@ -135,13 +135,7 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={company.phoneHref}
-                className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-5 py-3.5 text-base font-semibold text-white"
-              >
-                <Phone className="h-5 w-5" />
-                {company.phone}
-              </a>
+              
             </motion.div>
           </motion.div>
         )}

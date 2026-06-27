@@ -7,8 +7,8 @@ export const company = {
   description:
     'Asma tavan, bölme duvar, sıva, boya ve dış cephe çözümlerinde uzmanlaşmış, kaliteyi ve detayı önemseyen bir taahhüt firmasıyız.',
   founded: 2009,
-  phone: '0(216) 642 54 06',
-  phoneHref: 'tel:+902166425406',
+  phone: '',
+  phoneHref: '',
   email: 'tuncer@akatinsaat.com',
   emailHref: 'mailto:tuncer@akatinsaat.com',
   address:
