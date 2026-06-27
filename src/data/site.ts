@@ -327,7 +327,7 @@ export const fallbackProjects: Project[] = [
     category: 'Endüstriyel',
     location: 'Şişli, İstanbul',
     year: '2026',
-    image: '/projects/torunlar.jpg',
+    image: '/projects/torunlar.jpeg',
     description:
       'Torun Center HayHay Ofis ve idari binasında komple iç mekan taahhüt çözümleri.',
     status: 'Tamamlandı',
