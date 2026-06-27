@@ -320,6 +320,18 @@ export const fallbackProjects: Project[] = [
       'Gratis Tuzla depo ve idari binasında komple iç mekan taahhüt çözümleri.',
     status: 'Tamamlandı',
   },
+  {
+    id: 17,
+    slug: 'torun-center-hayhay-ofis',
+    title: 'Torun Center Hayhay Ofis',
+    category: 'Endüstriyel',
+    location: 'Şişli, İstanbul',
+    year: '2026',
+    image: '/projects/torunlar.jpg',
+    description:
+      'Torun Center HayHay Ofis ve idari binasında komple iç mekan taahhüt çözümleri.',
+    status: 'Tamamlandı',
+  },
 ]
 
 export type Stat = { value: string; label: string }

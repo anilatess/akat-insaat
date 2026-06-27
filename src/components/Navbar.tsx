@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, Phone, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { company, navItems } from '../data/site'
 import Logo from './Logo'
 
@@ -73,13 +73,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <a
-            href={company.phoneHref}
-            className="flex items-center gap-2 rounded-full bg-ink-900 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-brand-600 hover:shadow-lg hover:shadow-brand-500/25"
-          >
-            <Phone className="h-4 w-4" />
-            {company.phone}
-          </a>
+          
         </div>
 
         {/* Mobile toggle */}
